@@ -11,7 +11,10 @@
     <hr>
     <br>
 
-    <h1>Headers</h1>
+    <a href="cssNotes.html"> CSS Notes Page</a>
+    <h1> Headers</h1>
+
+
     <p>Headers are used to create page titles and section headers. There are 6 sizes pre-formatted for HTML.</p>
     <h1>h1-Computer Science</h1>
     <h2>h2-Computer Science</h2>
@@ -43,6 +46,90 @@
     <p>Above this paragraph is a line break.</p>
     <p>Below this paragraph is a horizontal rule.</p>
     <hr>
+
+    <h1 style="color: #f05454">Attributes</h1>
+    <p><b>Attributes</b> are properties which can change an HTML element. Attributes are written in the opening tag of ANY html element. The most common attributes are <i>src</i>, <i>href</i>, <i>class</i>, <i>id</i> and <i>style</i>.</p>
+
+    <h2>Inline CSS Styles</h2>
+    <p>The <i>style</i> attribute allows you to add CSS style to any HTML element.</p>
+
+    <p style="color: red">This paragraph has inline CSS style which changes the font color to red.</p>
+
+    <p style="background-color: #4665b4">This paragraph has inline CSS style which changes the background color.</p>
+
+    <p style="color: lightsteelblue; background-color: slategrey">This paragraph has inline CSS style which changes the font color <b>AND</b> the background color.</p>
+
+    <p style="font-family: Jokerman">This paragraph has a different font type.</p>
+
+    <p style="font-size: 48px">This paragraph has a larger font size.</p>
+
+    <p style="background-color: #222831; color: #dddddd; font-family: 'Edwardian Script ITC'; font-size: 72px">This paragraph has all 4 inline styles.</p>
+
+    <hr>
+
+    <h1 style =" color: #f4d160"> Images</h1>
+
+    <p>An <b>image element</b> is a <i>block</i> element which inserts pictures into the document. An image element is a self-closing element, which means it does not have an end tag. It has one attribute, src, which is a filepath that points to the images location. These filepaths can be either <b>absolute</b> or <b>relative.</b></p>
+
+    <h2>Simple Image Example</h2>
+    <img src="https://think.kera.org/wp-content/uploads/2020/05/shutterstock_750703924-800x500.jpg">
+
+    <h2>Image Attributes</h2>
+    <p>There are 4 attributes commonly used for images. <i>width</i> and <i>height</i> are used to resize the image. <i>alt</i> allows to use text-description of image for accessibility and broken images. <i>title</i> allows a hover-over text to appear</p>
+
+    <h3>Width and Height</h3>
+    <p>The width and height can be measured in many different ways, but the more common ones are pixels and percentages. Using pixels, you set the specific, precise size based on pixels. Using percentages, you set the dimensions based on a percentage of the entire page. Percentage based re-sizing will often respect aspect ratio while using pixels may not</p>
+
+    <img src="https://think.kera.org/wp-content/uploads/2020/05/shutterstock_750703924-800x500.jpg" title ="Set width and height using pixels" width="150px" height="150px">
+    <img src="https://think.kera.org/wp-content/uploads/2020/05/shutterstock_750703924-800x500.jpg" title ="Set width and height using pixels and maintaining aspect ratio" width="150px">
+    <img src="https://think.kera.org/wp-content/uploads/2020/05/shutterstock_750703924-800x500.jpg" title ="Set width and height using percentages" width="50%">
+
+    <h3>Alt Attributes</h3>
+    <p>EVERY picture should at LEAST have the alt attributes. The alt attribute helps with screen readers for visually impaired users and in the cases that the image is broken.</p>
+    <img src="https://think.kera.org/wp-content/uploads/2020/05/shutterstock_750703924-800x500.jpg" title ="Broken link without alt" width="50%">
+    <img src="https://think.kera.org/wp-content/uploads/2020/05/shutterstock_750703924-800x500.jpg" title ="Broken link with alt" width="50%" alt="picture of sunset on river and trees">
+
+    <h2>Relative vs Absolute</h2>
+    <p>An <b>absolute</b> filepath includes all the navigate to get to the server, folders, and file. The examples above are all absolute filepaths. An absolute filepath is used when the image is stored on a different server of device than the HTML document. </p>
+
+    <p>A <b>relative</b> filepath only include the folder and file. The examples below are all relative filepaths. A relative filepath is used when the images are stored alongside the HTML document</p>
+
+
+    <img src="cliff.jpg" width="50%" alt="person looking at sunset on cliff"/>
+
+    <hr>
+
+    <h1>Links</h1>
+
+    <p>The <b>anchor element</b> is an <i>inline element</i> and is a way to include hypertext links, otherwise known as just links, in your document. An anchor is a reference point for other documents or files. It commonly has 3 attributes: <i>href</i>, <i>target></i>, and <i>download</i>.</p>
+
+    <h2>Simple Links</h2>
+
+    <a href="https://www.webhamster.com/"> LINKS</a>
+
+    <p>In order for a link to work it <b>MUST</b> include the <i>href</i> attribute. This attribute is the filepath, either absolute or relative, to the document, website, or file you wish to link.</p>
+
+    <h2>Link Attributes</h2>
+    <p>Tge <i>target</i> attribute allows you to decide where the link opens. There are 4 options, but only one is commonly used. <i>_blank</i> opens the linked document in a new window or tab. <i>_self</i> opens the link in the current window or tab. This is the default behavior. The two others are only used if you have a frame or other window INSIDE a window. We will not be discussing these.</p>
+
+    <a href="https://www.webhamster.com/" target=""_blank>This link will open in a new tab.</a>
+
+    <p>The <i>download</i> attribute allows you to download the file or document linked. This is commonly used only with relative filepaths. </p>
+
+    <a href="cliff.jpg" download="cliffPic">This link with download a picture of a cliff with a sunset.</a>
+
+    <h2>A Picture as a Link</h2>
+    <p>Since a link as an opening AND closing tag, we can place ANY HTML ELEMENT as its content, which includes pictures. We simply nest the img element inside the anchor element.</p>
+
+    <a href="https://www.webhamster.com/" target=""_blank>
+        <img src="cliff.jpg" title="A picture as a link" alt="person on cliff looking at sunset" width="150px">
+    </a>
+
+    <h2>Link to Another Page</h2>
+
+    <a href="cssNotes.html"> CSS Notes Page</a>
+
+    <p></p>
 
     <br><hr>
 
